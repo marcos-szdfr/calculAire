@@ -1,0 +1,61 @@
+<!DOCTYPE html>   
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalulAire</title>
+
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        body {
+            height: 96vh;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <form action="formes.php" method="post">
+            
+            <label for="carre">Carré</label>
+            <input type="radio" id="carre" name="formes" value="Carre" onchange="this.form.submit();">
+            <label for="rectangle">Rctangle</label>
+            <input type="radio" id="rectangle" name="formes" value="Rectangle" onchange="this.form.submit();">
+            <label for="Triangle">Triangle</label>
+            <input type="radio" id="triangle" name="formes" value="Triangle" onchange="this.form.submit();">
+            <label for="trapeze">Trapèze</label>
+            <input type="radio" id="trapeze" name="formes" value="Trapeze" onchange="this.form.submit();">
+            <label for="losange">Losange</label>
+            <input type="radio" id="losange" name="formes" value="Losange" onchange="this.form.submit();">
+            <label for="polygoneReg">PolygoneReg</label>
+            <input type="radio" id="polygoneReg" name="formes" value="PolygoneReg" onchange="this.form.submit();">
+            <label for="cercle">Cercle</label>
+            <input type="radio" id="cercle" name="formes" value="Cercle" onchange="this.form.submit();">
+
+
+
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
