@@ -21,7 +21,22 @@ function losange($a, $b, $c){
 //$b = apothème
 //$a = périmètre 
 function polygoneReg($a, $b, $c){
-    $a =  
+    return($b = $a / (2 * tan(180/$c)));
+}
+
+
+function rectangle($a, $b){
+    return ($a * $b = $a + "cm^2");
+}
+
+
+function trapeze($petitB, $grandB, $hauteur ){
+    return(($petitB + $petitB)* $hauteur / 2);
+}
+
+
+function triangle($hauteur, $base){
+    return ($base * $hauteur) /2;
 }
 
 
