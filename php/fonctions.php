@@ -4,10 +4,12 @@ function carre($a, $b){
     return $a * $b;
 }
 
+
 function cercle($rayon){
     $r = pow($rayon, 2);
     return $r;
 }
+
 
 function losange($a, $b, $c){
     $a * $b = pow($c, 2); 
@@ -22,9 +24,11 @@ function polygoneReg($a, $b, $c){
     return($b = $a / (2 * tan(180/$c)));
 }
 
+
 function rectangle($a, $b){
     return ($a * $b = $a + "cm^2");
 }
+
 
 function trapeze($petitH, $grandH, $hauteur ){
     $a = $petitH + $grandH;
@@ -33,8 +37,10 @@ function trapeze($petitH, $grandH, $hauteur ){
     return($c +"cm^2");
 }
 
+
 function triangle($hauteur, $base){
     return ($base * $hauteur) /2;
 }
+
 
 ?>
