@@ -49,11 +49,17 @@ if ($formes == null) {
             include('html/triangle.html');
             break;
     }
-} else if (isset($btn)){
-   echo carre($cote, $cote2);
+
+} else if (isset($btn)) {
+    switch ($cote) { 
+
+    }
 }
 
-var_dump($formes);
+
+
+var_dump($cote);
+
 
 
 

@@ -1,37 +1,34 @@
 <?php
 
-function carre($a, $b){
-    return $a * $b;
+function carre($a){
+    return pow($a, 2);
 }
 
 
 function cercle($rayon){
-    $r = pow($rayon, 2);
-    return $r;
+    return pow($rayon, 2)*PI();
 }
 
 
-function losange($a, $b, $c){
-    $a * $b = pow($c, 2); 
-    return(pow($c, 2) / 2);
+function losange($diagonale1, $diagonale2){
+    return ($diagonale1 * $diagonale2) / 2;
 }
 
 
-//$c = nb coté
 //$b = apothème
 //$a = périmètre 
-function polygoneReg($a, $b, $c){
-    return($b = $a / (2 * tan(180/$c)));
+function polygoneReg($a, $b){
+    return 1/2 * $a * $b;
 }
 
 
 function rectangle($a, $b){
-    return ($a * $b = $a + "cm^2");
+    return ($a * $b);
 }
 
 
-function trapeze($petitB, $grandB, $hauteur ){
-    return(($petitB + $petitB)* $hauteur / 2);
+function trapeze($petitB, $grandeB, $hauteur ){
+    return((($petitB + $grandeB) * $hauteur) / 2);
 }
 
 
