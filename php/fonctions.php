@@ -14,8 +14,27 @@ function losange($a, $b, $c){
     return(pow($c, 2) / 2);
 }
 
+
+//$c = nb coté
+//$b = apothème
+//$a = périmètre 
 function polygoneReg($a, $b, $c){
-    $a =  
+    return($b = $a / (2 * tan(180/$c)));
+}
+
+function rectangle($a, $b){
+    return ($a * $b = $a + "cm^2");
+}
+
+function trapeze($petitH, $grandH, $hauteur ){
+    $a = $petitH + $grandH;
+    $b = $a * $hauteur;
+    $c = $b / 2;
+    return($c +"cm^2");
+}
+
+function triangle($hauteur, $base){
+    return ($base * $hauteur) /2;
 }
 
 ?>
