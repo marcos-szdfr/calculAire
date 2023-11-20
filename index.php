@@ -1,36 +1,43 @@
 <?php
 
-$formes = filter_input(INPUT_POST, "formes");
+$formes = filter_input(INPUT_POST, "formes", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-$btn = filter_input(INPUT_POST, "calculer");
+$btn = filter_input(INPUT_POST, "calculer", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-if ($formes == "") {
+if ($formes == null) {
     include("html/choix.html");
+} else if (false == $btn) {
+    switch ($formes) {
+        case 'Carre':
+            include 'html/carre.html';
+            break;
+        case 'Cercle':
+            include('html/cercle.html');
+            break;
+        case 'Losange':
+            include('html/losange.html');
+            break;
+        case 'PolygoneReg':
+            include('html/polygoneReg.html');
+            break;
+        case 'Rectangle':
+            include('html/rectangle.html');
+            break;
+        case 'Trapeze':
+            include('html/trapeze.html');
+            break;
+        case 'Triangle':
+            include('html/triangle.html');
+            break;
+    }
 }
 
-switch ($formes) {
-    case 'Carre':
-        include 'html/carre.html';
-        break;
-    case 'Cercle':
-        include('html/cercle.html');
-        break;
-    case 'Losange':
-        include('html/losange.html');
-        break;
-    case 'PolygoneReg':
-        include('html/polygoneReg.html');
-        break;
-    case 'Rectangle':
-        include('html/rectangle.html');
-        break;
-    case 'Trapeze':
-        include('html/trapeze.html');
-        break;
-    case 'Triangle':
-        include('html/triangle.html');
-        break;
-}
+var_dump($formes);
+
+
+
+
+
 
 //Les dimensions doivent être nettoyées et validées avec les filtres adéquats 
 //(en utilisant la fonction filter_input).

@@ -15,7 +15,6 @@ function losange($a, $b, $c){
 }
 
 function polygoneReg($a, $b, $c){
-    $a =  
 }
 
 ?>
