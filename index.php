@@ -1,9 +1,28 @@
 <?php
-
+require_once 'php/fonctions.php';
 $formes = filter_input(INPUT_POST, "formes", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 $btn = filter_input(INPUT_POST, "calculer", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+//Les dimensions doivent être nettoyées et validées avec les filtres adéquats 
+//(en utilisant la fonction filter_input).
+$cote = filter_input(INPUT_POST, 'Cote1', FILTER_VALIDATE_INT);
+$cote2 = filter_input(INPUT_POST, 'Cote2', FILTER_VALIDATE_INT);
 
+$rayon = filter_input(INPUT_POST, "Rayon", FILTER_VALIDATE_INT);
+
+$base = filter_input(INPUT_POST, "baseTriangle", FILTER_VALIDATE_INT);
+$hauteur = filter_input(INPUT_POST, "htrTriangle", FILTER_VALIDATE_INT);
+
+$ptBase = filter_input(INPUT_POST, "petiteBaseTrpz", FILTER_VALIDATE_INT);
+$grandeBase = filter_input(INPUT_POST, "grandeBaseTrpz", FILTER_VALIDATE_INT);
+$hauteurTrap = filter_input(INPUT_POST, "htrTrpz", FILTER_VALIDATE_INT);
+
+
+$longueur = filter_input(INPUT_POST, "longueurRec", FILTER_VALIDATE_INT);
+$largeur = filter_input(INPUT_POST, "largeurRec", FILTER_VALIDATE_INT);
+
+$permietre = filter_input(INPUT_POST, "Permietre", FILTER_VALIDATE_INT);
+$apotheme = filter_input(INPUT_POST, "Apotheme", FILTER_VALIDATE_INT);
 if ($formes == null) {
     include("html/choix.html");
 } else if (false == $btn) {
@@ -30,6 +49,8 @@ if ($formes == null) {
             include('html/triangle.html');
             break;
     }
+} else if (isset($btn)){
+   echo carre($cote, $cote2);
 }
 
 var_dump($formes);
@@ -39,26 +60,7 @@ var_dump($formes);
 
 
 
-//Les dimensions doivent être nettoyées et validées avec les filtres adéquats 
-//(en utilisant la fonction filter_input).
-$cote = filter_input(INPUT_POST, 'Cote1', FILTER_VALIDATE_INT);
-$cote2 = filter_input(INPUT_POST, 'Cote2', FILTER_VALIDATE_INT);
 
-$rayon = filter_input(INPUT_POST, "Rayon", FILTER_VALIDATE_INT);
-
-$base = filter_input(INPUT_POST, "baseTriangle", FILTER_VALIDATE_INT);
-$hauteur = filter_input(INPUT_POST, "htrTriangle", FILTER_VALIDATE_INT);
-
-$ptBase = filter_input(INPUT_POST, "petiteBaseTrpz", FILTER_VALIDATE_INT);
-$grandeBase = filter_input(INPUT_POST, "grandeBaseTrpz", FILTER_VALIDATE_INT);
-$hauteurTrap = filter_input(INPUT_POST, "htrTrpz", FILTER_VALIDATE_INT);
-
-
-$longueur = filter_input(INPUT_POST, "longueurRec", FILTER_VALIDATE_INT);
-$largeur = filter_input(INPUT_POST, "largeurRec", FILTER_VALIDATE_INT);
-
-$permietre = filter_input(INPUT_POST, "Permietre", FILTER_VALIDATE_INT);
-$apotheme = filter_input(INPUT_POST, "Apotheme", FILTER_VALIDATE_INT);
 
 
 
