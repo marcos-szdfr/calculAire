@@ -2,8 +2,10 @@
 
 $formes = filter_input(INPUT_POST, "formes");
 
-if ($btn == "calculer") {
-    include "html/choix.html";
+$btn = filter_input(INPUT_POST, "calculer");
+
+if ($formes == "") {
+    include("html/choix.html");
 }
 
 switch ($formes) {
@@ -30,7 +32,6 @@ switch ($formes) {
         break;
 }
 
-
 //Les dimensions doivent être nettoyées et validées avec les filtres adéquats 
 //(en utilisant la fonction filter_input).
 $cote = filter_input(INPUT_POST, 'Cote1', FILTER_VALIDATE_INT);
@@ -52,7 +53,6 @@ $largeur = filter_input(INPUT_POST, "largeurRec", FILTER_VALIDATE_INT);
 $permietre = filter_input(INPUT_POST, "Permietre", FILTER_VALIDATE_INT);
 $apotheme = filter_input(INPUT_POST, "Apotheme", FILTER_VALIDATE_INT);
 
-$btn = filter_input(INPUT_POST, "calculer");
 
 
 //Si les dimensions ne sont pas des chiffres valides, un message d’erreur en informera 
