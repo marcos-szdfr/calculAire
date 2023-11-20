@@ -30,11 +30,8 @@ function rectangle($a, $b){
 }
 
 
-function trapeze($petitH, $grandH, $hauteur ){
-    $a = $petitH + $grandH;
-    $b = $a * $hauteur;
-    $c = $b / 2;
-    return($c +"cm^2");
+function trapeze($petitB, $grandB, $hauteur ){
+    return(($petitB + $petitB)* $hauteur / 2);
 }
 
 
